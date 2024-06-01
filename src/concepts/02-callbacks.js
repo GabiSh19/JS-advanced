@@ -8,7 +8,7 @@ import { heroes } from '../data/heroes';
 
 export const callbacksComponent = (element) => {
 
-    const id = '5d86371f2343e37870b91ef1s';
+    const id = '5d86371f2343e37870b91ef1';
     findHero(id, (error, hero) => {
         // element.innerHTML = hero?.name || 'No hero found';
 
