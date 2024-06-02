@@ -15,7 +15,7 @@ document.querySelector('#app').innerHTML = `
       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
     </a>
     <h1>Javascript Advanced</h1>
-    <h1>En esta sección veremos: </h1>
+    <h3>En esta sección veremos: </h3>
     <ol> 
       <li> Variables de entorno </li>
       <li> Callbacks </li>
