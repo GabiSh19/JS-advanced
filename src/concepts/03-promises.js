@@ -26,12 +26,24 @@ export const promiseComponent = (element) => {
     const id1 = '5d86371f2343e37870b91ef1';
     const id2 = '5d86371f25a058e5b1c8a65e';
 
-    findHero(id1)
-        .then( superHero => renderHero(superHero) ) //En este caso podríamos simplicarlo de la siguiente manera: 
-        // .then( renderHero ) > Siempre y cuando los argumentos sean los mismos, en el mismo órden.
-        .catch(renderError);
+    // findHero(id1)
+    //     .then( superHero => renderHero(superHero) ) //En este caso podríamos simplicarlo de la siguiente manera: 
+    //     // .then( renderHero ) > Siempre y cuando los argumentos sean los mismos, en el mismo órden.
+    //     .catch(renderError);
 
-    //Con PROMISE HELL, sería lo siguiente: 
+    //Con PROMISE HELL, sería lo siguiente:
+    let hero1;
+    
+    findHero(id1)
+        .then( hero => {
+            hero1 = hero;
+            return findHero(id2)
+        })
+        .then(hero2 =>
+            renderTwoHeroes(hero1, hero2)
+        ).catch(renderError);
+
+    // En su versión más extensa: 
     // findHero(id1)
     // .then((hero1) => {
     //     findHero(id2)
@@ -39,6 +51,9 @@ export const promiseComponent = (element) => {
     //     .catch(renderError);
     // })
     // .catch(renderError);
+
+    
+
 }
 
 /**
