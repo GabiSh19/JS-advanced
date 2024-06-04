@@ -22,8 +22,8 @@ export const asyncAwait2Component = async(element) => {
     element.innerHTML = `
 
         value1: ${value1}
-        value2: ${value1}
-        value3: ${value1}
+        value2: ${value2}
+        value3: ${value3}
     
     `
 
