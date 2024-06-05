@@ -29,6 +29,8 @@ document.querySelector('#app').innerHTML = `
       <li> Promise race</li>
       <li> Funciones asíncronas: async</li>
       <li> async await</li>
+      <li> Optimización de async await</li>
+      <li> Funciones generadoras</li>
       
     
     
