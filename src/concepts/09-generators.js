@@ -5,9 +5,12 @@
 
 export const generatorFunctionsComponent = (element) => {
 
-    console.log('GeneratorFunctionsComponent')
+    const myGenerator = myFirstGeneratorFunction();
 
-    
+    console.log(myGenerator.next());    
+    console.log(myGenerator.next());    
+    console.log(myGenerator.next());    
+    console.log(myGenerator.next());    
 }
 
 function* myFirstGeneratorFunction() {
