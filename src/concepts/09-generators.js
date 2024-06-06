@@ -9,3 +9,12 @@ export const generatorFunctionsComponent = (element) => {
 
     
 }
+
+function* myFirstGeneratorFunction() {
+
+    yield 'Primer valor'
+    yield 'Segundo valor'
+    yield 'Tercer valor'
+
+    return 'Ya no hay valor'
+}
