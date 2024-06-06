@@ -5,13 +5,29 @@
 
 export const generatorFunctionsComponent = (element) => {
 
-    const myGenerator = myFirstGeneratorFunction();
+    // const myGenerator = myFirstGeneratorFunction();
+    // console.log(myGenerator.next());    
+    
+    const genId = idGenerator();
+    console.log(genId.next());
+    
+    const button = document.createElement('button');
+    button.innerText = 'Click me';
+    element.append(button);
 
-    console.log(myGenerator.next());    
-    console.log(myGenerator.next());    
-    console.log(myGenerator.next());    
-    console.log(myGenerator.next());    
+
 }
+
+//! Esta función generadora me servirá para trabajar con una serie de números, ids en este caso 
+
+function* idGenerator(){
+    let currentId = 0;
+    while (true) {
+        yield ++currentId;
+    }
+}
+
+
 
 function* myFirstGeneratorFunction() {
 
