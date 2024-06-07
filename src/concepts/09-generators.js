@@ -29,7 +29,7 @@ export const generatorFunctionsComponent = (element) => {
 function* idGenerator(){
     let currentId = 0;
     while (true) {
-        yield ++currentId;
+        yield currentId++;
     }
 }
 
