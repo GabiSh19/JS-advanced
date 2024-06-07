@@ -6,15 +6,21 @@ import { heroes } from "../data/heroes";
  */
 
 
-export const generatorAsyncComponent = (element) => {
+export const generatorAsyncComponent = async (element) => {
 
-    console.log('generatorAsyncComponent');
+    const heroGenerator = getHeroGenerator();
 
+    do {
+        
+    } while ( await(!heroGenerator.next()).done);
     
 }
 
 async function* getHeroGenerator(){
-    heroes
+    for ( const hero of heroes ) {
+        await sleep();
+        yield hero.name;
+    }
 }
 
 const sleep = () =>{
