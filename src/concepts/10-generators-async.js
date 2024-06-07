@@ -9,10 +9,15 @@ import { heroes } from "../data/heroes";
 export const generatorAsyncComponent = async (element) => {
 
     const heroGenerator = getHeroGenerator();
+    const isFinished = false; 
 
     do {
         
-    } while ( await(!heroGenerator.next()).done);
+        const { value, done } = await heroGenerator.next() 
+        isFinished = done;
+        element.innerHTML = value; 
+
+    } while( !isFinished );
     
 }
 
