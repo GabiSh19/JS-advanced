@@ -9,7 +9,7 @@ import { heroes } from "../data/heroes";
 export const generatorAsyncComponent = async (element) => {
 
     const heroGenerator = getHeroGenerator();
-    const isFinished = false; 
+    let isFinished = false; 
 
     do {
         
